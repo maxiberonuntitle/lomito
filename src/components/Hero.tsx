@@ -27,16 +27,18 @@ export const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="space-y-4 sm:space-y-6"
         >
-          {/* Icon */}
-          <div className="flex justify-center">
-            <div className="w-20 h-20 wood-gradient rounded-full flex items-center justify-center shadow-2xl">
-              <Utensils className="w-10 h-10 text-white drop-shadow-md" />
-            </div>
-          </div>
-
           {/* Main Title */}
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-            <span className="block text-white drop-shadow-lg">LOMITO</span>
+            <span 
+              className="block text-white drop-shadow-lg"
+              style={{ 
+                fontFamily: 'Suse Mono, Monaco, Consolas, monospace', 
+                fontWeight: '700', 
+                letterSpacing: '0.02em'
+              }}
+            >
+              LOMITO
+            </span>
             <span className="block text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-light mt-2 text-wood-light">
               El auténtico sabor argentino
             </span>
