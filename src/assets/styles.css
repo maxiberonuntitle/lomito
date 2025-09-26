@@ -190,6 +190,19 @@ html {
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
+  /* Prevenir problemas de escala en móviles */
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Configuración global para prevenir problemas de escala */
+html {
+  max-width: 100vw;
+  overflow-x: hidden;
+  /* Prevenir zoom automático en iOS */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 /* Efectos de hover mejorados */
@@ -208,6 +221,40 @@ body {
   -webkit-backdrop-filter: blur(12px);
 }
 
+/* Prevenir problemas de escala en el navbar */
+nav {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Asegurar que el navbar no cause overflow horizontal */
+@media (max-width: 640px) {
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  /* Asegurar que el contenido del navbar no se desborde */
+  nav .max-w-7xl {
+    max-width: 100vw;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Prevenir que los elementos del navbar causen zoom */
+  nav button,
+  nav a,
+  nav div {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
 /* Efectos de loading */
 @keyframes pulse {
   0%, 100% { opacity: 1; }
@@ -220,6 +267,18 @@ body {
 
 /* Responsive improvements */
 @media (max-width: 640px) {
+  /* Prevenir overflow horizontal en móviles */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  
+  /* Asegurar que todos los contenedores respeten el ancho de la pantalla */
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
   .hero-bg {
     background-attachment: scroll;
   }
@@ -235,7 +294,22 @@ body {
   .page-bg-wood,
   .page-bg-grass,
   .page-bg-dark {
-    background-attachment: scroll;
+    background-attachment: scroll !important;
+  }
+  
+  /* Asegurar que las secciones no causen overflow */
+  section {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  /* Contenedores principales con ancho controlado */
+  .max-w-7xl,
+  .max-w-4xl,
+  .max-w-2xl {
+    max-width: 100vw;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   
   .menu-card:hover {
@@ -265,6 +339,10 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  /* Prevenir problemas de escala en móviles */
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
 }
 
 .page-bg-grass {
@@ -274,6 +352,10 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  /* Prevenir problemas de escala en móviles */
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
 }
 
 .page-bg-dark {
@@ -283,6 +365,10 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  /* Prevenir problemas de escala en móviles */
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
 }
 
 /* Clases de texto para mejor legibilidad */
@@ -367,6 +453,34 @@ body {
   -webkit-backdrop-filter: blur(20px);
   transform: translateY(-1px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Prevenir zoom automático en móviles */
+@media (max-width: 640px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"],
+  textarea,
+  select {
+    font-size: 16px !important;
+    transform: scale(1) !important;
+    zoom: 1 !important;
+  }
+  
+  /* Prevenir que los elementos causen zoom */
+  button,
+  a,
+  div {
+    touch-action: manipulation;
+  }
+  
+  /* Asegurar que los contenedores no causen overflow */
+  .glass-card,
+  .glass-hover {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
 }
 
 /* Mejoras de accesibilidad */
