@@ -8,7 +8,6 @@ const menuData = {
       name: 'Lomito Clásico',
       description: 'Carne de ternera, lechuga, tomate, cebolla y mayonesa casera',
       price: '12.50',
-      image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
       time: '15 min',
       rating: 4.8
     },
@@ -17,7 +16,6 @@ const menuData = {
       name: 'Lomito Completo',
       description: 'Carne de ternera, jamón, queso, huevo, lechuga, tomate y mayonesa',
       price: '15.50',
-      image: 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
       time: '18 min',
       rating: 4.9
     },
@@ -26,7 +24,6 @@ const menuData = {
       name: 'Lomito Especial',
       description: 'Carne premium, panceta, queso azul, rúcula y salsa especial',
       price: '18.50',
-      image: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
       time: '20 min',
       rating: 4.9
     }
@@ -37,7 +34,6 @@ const menuData = {
       name: 'Milanesa de Ternera',
       description: 'Milanesa de ternera empanada, papas fritas y ensalada',
       price: '14.50',
-      image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
       time: '20 min',
       rating: 4.7
     },
@@ -46,7 +42,6 @@ const menuData = {
       name: 'Milanesa Napolitana',
       description: 'Milanesa con jamón, queso, tomate y orégano',
       price: '16.50',
-      image: 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
       time: '22 min',
       rating: 4.8
     },
@@ -55,7 +50,6 @@ const menuData = {
       name: 'Milanesa a la Suiza',
       description: 'Milanesa con queso fundido y papas fritas',
       price: '17.50',
-      image: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
       time: '25 min',
       rating: 4.9
     }
@@ -66,7 +60,6 @@ const menuData = {
       name: 'Papas Fritas Clásicas',
       description: 'Papas fritas crujientes con sal marina',
       price: '4.50',
-      image: 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
       time: '10 min',
       rating: 4.6
     },
@@ -75,7 +68,6 @@ const menuData = {
       name: 'Papas con Cheddar',
       description: 'Papas fritas con queso cheddar fundido',
       price: '6.50',
-      image: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
       time: '12 min',
       rating: 4.8
     }
@@ -86,7 +78,6 @@ const menuData = {
       name: 'Cerveza Nacional',
       description: 'Cerveza fría de barril',
       price: '3.50',
-      image: 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
       time: '2 min',
       rating: 4.5
     },
@@ -95,7 +86,6 @@ const menuData = {
       name: 'Refrescos',
       description: 'Coca-Cola, Fanta, Sprite',
       price: '2.50',
-      image: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
       time: '1 min',
       rating: 4.4
     }
@@ -109,36 +99,30 @@ const MenuCard = ({ item, index }: { item: any, index: number }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       viewport={{ once: true }}
-      className="menu-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300"
+      className="menu-card bg-black/30 backdrop-blur-md rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 border border-white/40 hover:bg-black/40"
     >
-      <div className="relative h-48 overflow-hidden">
-        <img
-          src={item.image}
-          alt={item.name}
-          className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-        />
-        <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 flex items-center space-x-1">
-          <Star className="w-4 h-4 text-yellow-500 fill-current" />
-          <span className="text-sm font-semibold text-gray-800">{item.rating}</span>
-        </div>
-      </div>
-      
       <div className="p-6">
         <div className="flex justify-between items-start mb-3">
-          <h3 className="text-xl font-bold text-lomito-black">{item.name}</h3>
-          <span className="text-2xl font-bold text-lomito-red">€{item.price}</span>
+          <h3 className="text-lg sm:text-xl font-bold text-white drop-shadow-md">{item.name}</h3>
+          <div className="flex items-center space-x-2">
+            <div className="bg-black/40 backdrop-blur-md rounded-full px-3 py-1 flex items-center space-x-1 border border-white/50">
+              <Star className="w-4 h-4 text-yellow-300 fill-current drop-shadow-md" />
+              <span className="text-sm font-semibold text-white drop-shadow-md">{item.rating}</span>
+            </div>
+            <span className="text-2xl font-bold text-wood-light drop-shadow-md">€{item.price}</span>
+          </div>
         </div>
         
-        <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+        <p className="text-white/90 text-sm mb-4 leading-relaxed drop-shadow-sm">
           {item.description}
         </p>
         
         <div className="flex justify-between items-center">
-          <div className="flex items-center space-x-1 text-gray-500">
-            <Clock className="w-4 h-4" />
-            <span className="text-sm">{item.time}</span>
+          <div className="flex items-center space-x-1 text-white/80">
+            <Clock className="w-4 h-4 drop-shadow-sm" />
+            <span className="text-sm drop-shadow-sm">{item.time}</span>
           </div>
-          <button className="btn-primary text-sm px-4 py-2">
+          <button className="bg-wood-dark hover:bg-wood-darker text-white border border-wood-light hover:border-wood-light backdrop-blur-md text-sm px-4 py-2 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl">
             Pedir Ahora
           </button>
         </div>

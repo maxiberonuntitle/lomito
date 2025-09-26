@@ -2,8 +2,8 @@ import { MapPin, Clock, Phone, Mail } from 'lucide-react';
 
 export const Footer = () => {
   return (
-    <footer className="footer-bg text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="footer-bg text-white relative">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Información del bar pizzeria */}
           <div className="space-y-4">
@@ -20,7 +20,7 @@ export const Footer = () => {
 
           {/* Información de contacto */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-grass-light">Contacto</h3>
+            <h3 className="text-base sm:text-lg font-semibold text-grass-light">Contacto</h3>
             <div className="space-y-3">
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-grass-accent mt-0.5 flex-shrink-0" />
@@ -61,7 +61,7 @@ export const Footer = () => {
 
           {/* Horarios */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-grass-light">Horarios</h3>
+            <h3 className="text-base sm:text-lg font-semibold text-grass-light">Horarios</h3>
             <div className="space-y-2">
               <div className="flex justify-between text-sm">
                 <span className="text-grass-light">Lunes - Domingo</span>

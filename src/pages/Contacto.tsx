@@ -53,26 +53,47 @@ export const Contacto = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-16">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-lomito-red to-red-800 text-white">
+      <section className="relative py-20 page-bg-wood text-white">
         <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto py-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="space-y-4 sm:space-y-6"
           >
-            <h1 className="text-5xl font-bold mb-6">Contacto</h1>
-            <p className="text-xl text-red-100 max-w-3xl mx-auto">
-              Estamos aquí para atenderte. Ven a visitarnos o contáctanos para cualquier consulta
+            {/* Icon */}
+            <div className="flex justify-center">
+              <div className="w-20 h-20 wood-gradient rounded-full flex items-center justify-center shadow-2xl">
+                <MapPin className="w-10 h-10 text-white drop-shadow-md" />
+              </div>
+            </div>
+
+            {/* Main Title */}
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+              <span className="block text-white drop-shadow-lg">Contacto</span>
+              <span className="block text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-light mt-2 text-wood-light">
+                Estamos aquí para atenderte
+              </span>
+              <span className="block text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-light mt-4 text-wood-light">
+                en Lloret de Mar
+              </span>
+            </h1>
+
+            {/* Subtitle */}
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed px-4">
+              Ven a visitarnos o contáctanos para cualquier consulta. 
+              Estamos en el corazón de Lloret de Mar para servirte.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Contact Info Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 page-bg-grass">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -81,10 +102,10 @@ export const Contacto = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-lomito-black mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 drop-shadow-lg">
               Información de Contacto
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-lg sm:text-xl text-grass-light drop-shadow-md">
               Encuéntranos en el corazón de Lloret de Mar
             </p>
           </motion.div>
@@ -99,14 +120,14 @@ export const Contacto = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-gray-50 p-8 rounded-xl text-center hover:shadow-lg transition-shadow"
+                  className="glass-card glass-hover p-8 rounded-xl text-center"
                 >
-                  <div className="w-16 h-16 bg-lomito-red rounded-full flex items-center justify-center mx-auto mb-6">
+                  <div className="w-16 h-16 bg-wood-dark rounded-full flex items-center justify-center mx-auto mb-6">
                     <Icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-lomito-black mb-4">{info.title}</h3>
-                  <p className="text-gray-600 mb-4 whitespace-pre-line">{info.content}</p>
-                  <button className="text-lomito-red font-semibold hover:text-red-700 transition-colors">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-4 text-shadow-lg">{info.title}</h3>
+                  <p className="text-white/90 mb-4 whitespace-pre-line text-shadow-md">{info.content}</p>
+                  <button className="text-white font-semibold hover:text-wood-light transition-colors text-shadow-md hover:text-shadow-lg">
                     {info.action}
                   </button>
                 </motion.div>
@@ -117,7 +138,7 @@ export const Contacto = () => {
       </section>
 
       {/* Map and Form Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 page-bg-wood">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Map */}
@@ -128,7 +149,7 @@ export const Contacto = () => {
               viewport={{ once: true }}
               className="space-y-6"
             >
-              <h3 className="text-3xl font-bold text-lomito-black mb-6">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6 drop-shadow-lg">
                 Nuestra Ubicación
               </h3>
               <div className="bg-gray-200 rounded-xl overflow-hidden shadow-lg">
@@ -143,7 +164,7 @@ export const Contacto = () => {
                   title="Ubicación de Lomito"
                 ></iframe>
               </div>
-              <div className="flex items-center space-x-2 text-gray-600">
+              <div className="flex items-center space-x-2 text-wood-light drop-shadow-md">
                 <Navigation className="w-5 h-5" />
                 <span>Fácil acceso en transporte público y privado</span>
               </div>
@@ -155,14 +176,14 @@ export const Contacto = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-white p-8 rounded-xl shadow-lg"
+              className="glass-card glass-hover p-8 rounded-xl"
             >
-              <h3 className="text-3xl font-bold text-lomito-black mb-6">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-6 text-shadow-lg">
                 Envíanos un Mensaje
               </h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="name" className="block text-sm font-semibold text-white mb-2 text-shadow-md">
                     Nombre *
                   </label>
                   <input
@@ -172,13 +193,13 @@ export const Contacto = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lomito-red focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 glass-input rounded-lg"
                     placeholder="Tu nombre completo"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-semibold text-white mb-2 text-shadow-md">
                     Email *
                   </label>
                   <input
@@ -188,13 +209,13 @@ export const Contacto = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lomito-red focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 glass-input rounded-lg"
                     placeholder="tu@email.com"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="phone" className="block text-sm font-semibold text-white mb-2 text-shadow-md">
                     Teléfono
                   </label>
                   <input
@@ -203,13 +224,13 @@ export const Contacto = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lomito-red focus:border-transparent transition-colors"
+                    className="w-full px-4 py-3 glass-input rounded-lg"
                     placeholder="+34 XXX XXX XXX"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="message" className="block text-sm font-semibold text-white mb-2 text-shadow-md">
                     Mensaje *
                   </label>
                   <textarea
@@ -219,7 +240,7 @@ export const Contacto = () => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lomito-red focus:border-transparent transition-colors resize-none"
+                    className="w-full px-4 py-3 glass-input rounded-lg resize-none"
                     placeholder="Cuéntanos qué necesitas..."
                   />
                 </div>
@@ -238,7 +259,7 @@ export const Contacto = () => {
       </section>
 
       {/* Additional Info Section */}
-      <section className="py-20 bg-lomito-black text-white">
+      <section className="py-20 page-bg-dark text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -247,8 +268,8 @@ export const Contacto = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold mb-6">¿Por qué elegirnos?</h2>
-            <p className="text-xl text-gray-300">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">¿Por qué elegirnos?</h2>
+            <p className="text-lg sm:text-xl text-gray-300">
               Más de 10 años de experiencia en Lloret de Mar
             </p>
           </motion.div>
@@ -259,12 +280,12 @@ export const Contacto = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-center"
+              className="text-center bg-black/20 backdrop-blur-md p-8 rounded-xl border border-white/20 hover:bg-black/30 transition-all duration-300"
             >
-              <div className="w-16 h-16 bg-lomito-red rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-wood-dark rounded-full flex items-center justify-center mx-auto mb-6">
                 <Clock className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold mb-4">Horarios Extendidos</h3>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-4">Horarios Extendidos</h3>
               <p className="text-gray-300">
                 Abiertos todos los días de 13:00 a 00:00 para que puedas disfrutar 
                 de nuestros platos en cualquier momento.
@@ -276,12 +297,12 @@ export const Contacto = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className="text-center"
+              className="text-center bg-black/20 backdrop-blur-md p-8 rounded-xl border border-white/20 hover:bg-black/30 transition-all duration-300"
             >
-              <div className="w-16 h-16 bg-lomito-red rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-wood-dark rounded-full flex items-center justify-center mx-auto mb-6">
                 <MapPin className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold mb-4">Ubicación Céntrica</h3>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-4">Ubicación Céntrica</h3>
               <p className="text-gray-300">
                 En el corazón de Lloret de Mar, con fácil acceso en transporte 
                 público y estacionamiento disponible.
@@ -293,12 +314,12 @@ export const Contacto = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               viewport={{ once: true }}
-              className="text-center"
+              className="text-center bg-black/20 backdrop-blur-md p-8 rounded-xl border border-white/20 hover:bg-black/30 transition-all duration-300"
             >
-              <div className="w-16 h-16 bg-lomito-red rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-wood-dark rounded-full flex items-center justify-center mx-auto mb-6">
                 <Phone className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold mb-4">Atención Personalizada</h3>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-4">Atención Personalizada</h3>
               <p className="text-gray-300">
                 Nuestro equipo está siempre disponible para atenderte y 
                 hacer que tu experiencia sea inolvidable.
@@ -309,7 +330,7 @@ export const Contacto = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-lomito-red text-white">
+      <section className="py-16 wood-gradient text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -317,22 +338,22 @@ export const Contacto = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
               ¿Listo para probar nuestros lomitos?
             </h2>
-            <p className="text-xl mb-8 text-red-100">
+            <p className="text-lg sm:text-xl mb-8 text-wood-light">
               Ven a visitarnos en Avinguda Vila de Blanes, 118 - Lloret de Mar
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/menu"
-                className="bg-white text-lomito-red px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="bg-white text-wood-dark px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
               >
                 Ver Nuestro Menú
               </a>
               <a
                 href="tel:+34XXXXXXXXX"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-lomito-red transition-colors"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-wood-dark transition-colors shadow-lg"
               >
                 Llamar Ahora
               </a>

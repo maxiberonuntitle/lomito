@@ -10,7 +10,7 @@ export const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat parallax"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
+          backgroundImage: `url('/images/external.jpg')`,
           transform: 'translateZ(0)',
           willChange: 'transform'
         }}
@@ -35,18 +35,18 @@ export const Hero = () => {
           </div>
 
           {/* Main Title */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
             <span className="block text-white drop-shadow-lg">LOMITO</span>
-            <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light mt-2 text-wood-light">
+            <span className="block text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-light mt-2 text-wood-light">
               El auténtico sabor argentino
             </span>
-            <span className="block text-base sm:text-lg md:text-xl lg:text-2xl font-light mt-4 text-wood-light">
+            <span className="block text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-light mt-4 text-wood-light">
               en Lloret de Mar
             </span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-base sm:text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed px-4">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed px-4">
             Especialistas en lomitos y milanesas con la tradición argentina. 
             El sabor auténtico de Argentina en la Costa Brava.
           </p>
@@ -55,7 +55,7 @@ export const Hero = () => {
           <div className="flex justify-center items-center pt-6 sm:pt-8 px-4">
             <Link
               to="/menu"
-              className="btn-primary text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold shadow-2xl hover:shadow-red-500/25 transition-all duration-300 w-full sm:w-auto"
+              className="btn-primary-transparent text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold shadow-2xl hover:shadow-red-500/25 transition-all duration-300 w-full sm:w-auto"
             >
               Ver Menú
             </Link>
@@ -72,7 +72,7 @@ export const Hero = () => {
               <div className="w-12 h-12 wood-gradient rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg">
                 <Utensils className="w-6 h-6 text-white drop-shadow-md" />
               </div>
-              <h3 className="font-semibold text-white mb-2">Lomitos Auténticos</h3>
+              <h3 className="text-sm sm:text-base font-semibold text-white mb-2">Lomitos Auténticos</h3>
               <p className="text-sm text-gray-300">Receta tradicional argentina</p>
             </motion.div>
 
@@ -85,7 +85,7 @@ export const Hero = () => {
               <div className="w-12 h-12 wood-gradient rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg">
                 <Utensils className="w-6 h-6 text-white drop-shadow-md" />
               </div>
-              <h3 className="font-semibold text-white mb-2">Milanesas Argentinas</h3>
+              <h3 className="text-sm sm:text-base font-semibold text-white mb-2">Milanesas Argentinas</h3>
               <p className="text-sm text-gray-300">El sabor de Argentina en España</p>
             </motion.div>
 
@@ -98,7 +98,7 @@ export const Hero = () => {
               <div className="w-12 h-12 wood-gradient rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg">
                 <Coffee className="w-6 h-6 text-white drop-shadow-md" />
               </div>
-              <h3 className="font-semibold text-white mb-2">Bebidas</h3>
+              <h3 className="text-sm sm:text-base font-semibold text-white mb-2">Bebidas</h3>
               <p className="text-sm text-gray-300">Refrescantes y variadas</p>
             </motion.div>
           </div>
