@@ -1,16 +1,23 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MenuList } from '../components/MenuList';
-import { Utensils, Coffee } from 'lucide-react';
+import { Utensils, Coffee, Wine, Salad, Pie, Pizza, Hamburger, Sandwich, CircleDot } from 'lucide-react';
 
 export const Menu = () => {
-  const [activeCategory, setActiveCategory] = useState<'lomitos' | 'milanesas' | 'papas' | 'bebidas'>('lomitos');
+  const [activeCategory, setActiveCategory] = useState<'bebidas' | 'cervezas' | 'vinos' | 'ensaladas' | 'tartas' | 'lomos' | 'paraCompartir' | 'pizzas' | 'hamburguesas' | 'sandwiches' | 'empanadas'>('bebidas');
 
-  const categories: Array<{ id: 'lomitos' | 'milanesas' | 'papas' | 'bebidas', name: string, icon: any }> = [
-    { id: 'lomitos', name: 'Lomitos', icon: Utensils },
-    { id: 'milanesas', name: 'Milanesas', icon: Utensils },
-    { id: 'papas', name: 'Papas Fritas', icon: Utensils },
+  const categories: Array<{ id: 'bebidas' | 'cervezas' | 'vinos' | 'ensaladas' | 'tartas' | 'lomos' | 'paraCompartir' | 'pizzas' | 'hamburguesas' | 'sandwiches' | 'empanadas', name: string, icon: any }> = [
     { id: 'bebidas', name: 'Bebidas', icon: Coffee },
+    { id: 'cervezas', name: 'Cervezas', icon: Coffee },
+    { id: 'vinos', name: 'Vinos', icon: Wine },
+    { id: 'ensaladas', name: 'Ensaladas', icon: Salad },
+    { id: 'tartas', name: 'Tartas', icon: Pie },
+    { id: 'lomos', name: 'Lomos', icon: Utensils },
+    { id: 'paraCompartir', name: 'Para Compartir', icon: CircleDot },
+    { id: 'pizzas', name: 'Pizzas', icon: Pizza },
+    { id: 'hamburguesas', name: 'Hamburguesas', icon: Hamburger },
+    { id: 'sandwiches', name: 'Sandwiches', icon: Sandwich },
+    { id: 'empanadas', name: 'Empanadas', icon: CircleDot },
   ];
 
   return (
@@ -27,7 +34,7 @@ export const Menu = () => {
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-lg">Nuestro Menú</h1>
             <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto drop-shadow-md">
-              Descubre nuestra selección de lomitos, milanesas y platos tradicionales argentinos
+              Descubre nuestra amplia selección de lomitos, pizzas, hamburguesas, empanadas y mucho más
             </p>
           </motion.div>
 
