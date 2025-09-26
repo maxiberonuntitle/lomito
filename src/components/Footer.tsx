@@ -8,7 +8,7 @@ export const Footer = () => {
           {/* Información del bar pizzeria */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <span className="text-2xl font-bold text-white drop-shadow-lg" style={{ fontFamily: 'Suse Mono, Monaco, Consolas, monospace', fontWeight: '700', letterSpacing: '0.02em' }}>
+              <span className="text-2xl font-bold text-white drop-shadow-lg" style={{ fontFamily: 'Inter, system-ui, sans-serif', fontWeight: '700', letterSpacing: '0.05em' }}>
                 LOMITO
               </span>
             </div>
