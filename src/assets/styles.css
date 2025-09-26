@@ -75,7 +75,7 @@
 .footer-bg {
   background: 
     linear-gradient(135deg, rgba(34, 139, 34, 0.7), rgba(0, 100, 0, 0.8)),
-    url('./images/external.jpg');
+    url('/images/image3.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
