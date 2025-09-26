@@ -1,0 +1,9 @@
+@echo off
+echo Iniciando Lomito App...
+echo.
+echo Verificando dependencias...
+call npm install
+echo.
+echo Iniciando servidor de desarrollo...
+call npm run dev
+pause

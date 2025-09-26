@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+/* Estilos personalizados para Lomito */
+.hero-bg {
+  background: linear-gradient(135deg, rgba(139, 69, 19, 0.85), rgba(101, 67, 33, 0.9));
+  background-attachment: fixed;
+}
+
+.wood-gradient {
+  background: linear-gradient(135deg, #D2B48C, #8B4513);
+}
+
+.wood-texture {
+  background: 
+    linear-gradient(45deg, transparent 25%, rgba(139, 69, 19, 0.1) 25%, rgba(139, 69, 19, 0.1) 50%, transparent 50%, transparent 75%, rgba(139, 69, 19, 0.1) 75%),
+    linear-gradient(135deg, #F5E6D3, #D2B48C);
+  background-size: 20px 20px, 100% 100%;
+}
+
+.menu-card {
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-blur {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(245, 230, 211, 0.9);
+  border-bottom: 1px solid rgba(139, 69, 19, 0.2);
+}
+
+.navbar-blur.scrolled {
+  background: rgba(245, 230, 211, 0.95);
+  box-shadow: 0 2px 20px rgba(139, 69, 19, 0.1);
+}
+
+.footer-bg {
+  background: 
+    linear-gradient(135deg, rgba(34, 139, 34, 0.9), rgba(0, 100, 0, 0.9)),
+    url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: 
+    linear-gradient(45deg, transparent 25%, rgba(144, 238, 144, 0.4) 25%, rgba(144, 238, 144, 0.4) 50%, transparent 50%, transparent 75%, rgba(144, 238, 144, 0.4) 75%),
+    linear-gradient(135deg, #32CD32, #228B22);
+  background-size: 20px 20px, 100% 100%;
+  animation: grass-wave 4s ease-in-out infinite;
+}
+
+@keyframes grass-wave {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(8px); }
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #8B4513, #A0522D);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.4);
+  background: linear-gradient(135deg, #A0522D, #8B4513);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #8B4513;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid #8B4513;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: #8B4513;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Efectos de parallax mejorados */
+.parallax {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Animaciones suaves para scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mejoras para la tipografía */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+/* Efectos de hover mejorados */
+.menu-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Mejoras para el navbar */
+.navbar-blur {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Efectos de loading */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.loading {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Responsive improvements */
+@media (max-width: 640px) {
+  .hero-bg {
+    background-attachment: scroll;
+  }
+  
+  .menu-card:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+}
+
+/* Mejoras para tablets */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .menu-card:hover {
+    transform: translateY(-6px) scale(1.015);
+  }
+}
+
+/* Mejoras para desktop */
+@media (min-width: 1025px) {
+  .menu-card:hover {
+    transform: translateY(-8px) scale(1.02);
+  }
+}
+
+/* Mejoras de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  .menu-card {
+    transition: none;
+  }
+  
+  .menu-card:hover {
+    transform: none;
+  }
+  
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
