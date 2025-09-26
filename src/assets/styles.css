@@ -24,7 +24,7 @@
 
 /* Estilos personalizados para Lomito */
 .hero-bg {
-  background: linear-gradient(135deg, rgba(101, 67, 33, 0.9), rgba(80, 50, 20, 0.95));
+  background: linear-gradient(135deg, rgba(55, 65, 81, 0.7), rgba(31, 41, 55, 0.8));
   background-attachment: fixed;
 }
 
@@ -221,6 +221,20 @@ body {
 /* Responsive improvements */
 @media (max-width: 640px) {
   .hero-bg {
+    background-attachment: scroll;
+  }
+  
+  /* Desactivar parallax en mobile para evitar saltos */
+  .parallax {
+    background-attachment: scroll !important;
+    transform: none !important;
+    will-change: auto !important;
+  }
+  
+  /* Desactivar background-attachment fixed en mobile para las páginas */
+  .page-bg-wood,
+  .page-bg-grass,
+  .page-bg-dark {
     background-attachment: scroll;
   }
   

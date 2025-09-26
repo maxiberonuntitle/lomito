@@ -10,14 +10,14 @@ export const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat parallax"
         style={{
-          backgroundImage: `url('/images/external.jpg')`,
+          backgroundImage: `url('/images/image2.jpg')`,
           transform: 'translateZ(0)',
           willChange: 'transform'
         }}
       />
       
-      {/* Overlay */}
-      <div className="absolute inset-0 hero-bg" />
+      {/* Overlay with gray tint */}
+      <div className="absolute inset-0 bg-gray-900/60" />
       
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto py-20">
