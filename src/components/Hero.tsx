@@ -36,7 +36,7 @@ export const Hero = () => {
 
           {/* Main Title */}
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-            <span className="block text-white drop-shadow-lg">LOMITO</span>
+            <span className="block text-white drop-shadow-lg" style={{ fontFamily: 'Suse Mono, Monaco, Consolas, monospace', fontWeight: '700', letterSpacing: '0.02em' }}>LOMITO</span>
             <span className="block text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-light mt-2 text-wood-light">
               El auténtico sabor argentino
             </span>

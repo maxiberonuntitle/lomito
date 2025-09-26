@@ -37,9 +37,9 @@ export const Navbar = () => {
             <span 
               className="font-bold transition-all duration-300 text-white drop-shadow-lg"
               style={{ 
-                fontFamily: 'Inter, system-ui, sans-serif', 
+                fontFamily: 'Suse Mono, Monaco, Consolas, monospace', 
                 fontWeight: '700', 
-                letterSpacing: '0.05em',
+                letterSpacing: '0.02em',
                 fontSize: `${logoSize}rem`
               }}
             >

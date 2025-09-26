@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MenuList } from '../components/MenuList';
-import { Utensils, Coffee, Wine, Salad, Pie, Pizza, Hamburger, Sandwich, CircleDot } from 'lucide-react';
+import { Utensils, Coffee, Wine, Salad, Cake, Pizza, Hamburger, Sandwich, CircleDot } from 'lucide-react';
 
 export const Menu = () => {
   const [activeCategory, setActiveCategory] = useState<'bebidas' | 'cervezas' | 'vinos' | 'ensaladas' | 'tartas' | 'lomos' | 'paraCompartir' | 'pizzas' | 'hamburguesas' | 'sandwiches' | 'empanadas'>('bebidas');
@@ -11,7 +11,7 @@ export const Menu = () => {
     { id: 'cervezas', name: 'Cervezas', icon: Coffee },
     { id: 'vinos', name: 'Vinos', icon: Wine },
     { id: 'ensaladas', name: 'Ensaladas', icon: Salad },
-    { id: 'tartas', name: 'Tartas', icon: Pie },
+    { id: 'tartas', name: 'Tartas', icon: Cake },
     { id: 'lomos', name: 'Lomos', icon: Utensils },
     { id: 'paraCompartir', name: 'Para Compartir', icon: CircleDot },
     { id: 'pizzas', name: 'Pizzas', icon: Pizza },
