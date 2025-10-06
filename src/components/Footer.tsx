@@ -1,4 +1,4 @@
-import { MapPin, Clock, Phone, Mail } from 'lucide-react';
+import { MapPin, Clock } from 'lucide-react';
 
 export const Footer = () => {
   return (
@@ -49,20 +49,6 @@ export const Footer = () => {
                   </p>
                 </div>
               </div>
-
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-grass-accent" />
-                <p className="text-sm text-grass-light">
-                  +34 XXX XXX XXX
-                </p>
-              </div>
-
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-grass-accent" />
-                <p className="text-sm text-grass-light">
-                  info@lomito-lloret.com
-                </p>
-              </div>
             </div>
           </div>
 
@@ -87,7 +73,7 @@ export const Footer = () => {
         <div className="border-t border-grass-accent mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-grass-light/80">
-              © 2024 Lomito - Bar Pizzeria Argentino. Todos los derechos reservados.
+              © 2025 Lomito - Bar Pizzeria Argentino. Todos los derechos reservados.
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-sm text-grass-light/80 hover:text-grass-accent transition-colors">
@@ -95,6 +81,15 @@ export const Footer = () => {
               </a>
               <a href="#" className="text-sm text-grass-light/80 hover:text-grass-accent transition-colors">
                 Términos de Uso
+              </a>
+              <a 
+                href="https://maxisoluciones.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="group text-sm transition-colors"
+              >
+                <span className="text-grass-light/80">Desarrollado por </span>
+                <span className="text-blue-400 group-hover:text-blue-500">Maxi Soluciones Digitales</span>
               </a>
             </div>
           </div>
